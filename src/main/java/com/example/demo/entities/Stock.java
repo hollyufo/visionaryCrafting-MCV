@@ -1,4 +1,5 @@
-package com.visionaryCrofting.demo.entity;
+package com.example.demo.entities;
+
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;

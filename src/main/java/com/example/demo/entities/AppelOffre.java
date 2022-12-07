@@ -35,7 +35,7 @@ public class AppelOffre implements Serializable {
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "stock_id")
     //@JsonManagedReference
-    private com.visionaryCrofting.demo.entity.Stock stock;
+    private Stock stock;
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "fournisseur_id")

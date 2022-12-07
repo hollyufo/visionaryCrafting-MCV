@@ -7,7 +7,7 @@ import java.util.List;
 @Service
 public interface AppelOffreService {
     int deleteByRef(String ref);
-    
+
     AppelOffre findByRef(String ref);
 
     List<AppelOffre> findAll();

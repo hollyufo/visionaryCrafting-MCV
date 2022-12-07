@@ -41,4 +41,3 @@ public class AppelOffreServiceImpl implements AppelOffreService {
         return null;
     }
 }
-}

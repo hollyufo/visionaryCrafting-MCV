@@ -2,9 +2,11 @@ package com.example.demo.service.impliemntation;
 
 import com.example.demo.entities.AppelOffre;
 import com.example.demo.service.AppelOffreService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class AppelOffreServiceImpl implements AppelOffreService {
     @Override
     public int deleteByRef(String ref) {

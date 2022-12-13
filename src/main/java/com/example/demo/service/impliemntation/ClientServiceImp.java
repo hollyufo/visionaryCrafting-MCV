@@ -76,5 +76,14 @@ public class ClientServiceImp implements ClientService {
             throw new IllegalStateException("id non trouvé");
         }
     }
+    // delete client
+    public void deleteClient(Long id) {
+        boolean exists = clientRepository.existsById(id);
+        if(!exists){
+            throw new IllegalStateException("id non trouvé");
+        }else{
+            clientRepository.deleteById(id);
+        }
+    }
 
 }

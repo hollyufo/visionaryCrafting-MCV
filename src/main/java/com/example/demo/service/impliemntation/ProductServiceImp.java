@@ -6,11 +6,12 @@ import com.example.demo.repository.ProductRepository;
 import com.example.demo.service.ProductService;
 import com.example.demo.service.StockService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
-
+@Service
 public class ProductServiceImp implements ProductService {
 
     @Autowired
@@ -18,10 +19,6 @@ public class ProductServiceImp implements ProductService {
 
     @Autowired
     StockService stockService;
-    @Override
-    public Optional<Product> getById(Long id) {
-        return productRepository.findById(id);
-    }
     @Override
     public List<Product> getAll() {
         return productRepository.findAll();
@@ -99,6 +96,10 @@ public class ProductServiceImp implements ProductService {
             }
             return productRepository.save(byRef);
         }
+    }
+    public Product findById(Long id){
+        Product product = productRepository.findById(id).orElse(null);
+        return product;
     }
     @Override
     public void deleteById(Long id) {

@@ -34,6 +34,8 @@ public class Product implements Serializable {
     private String category;
    @Column(name = "descreption")
     private String descreption;
+   @Column(name = "price")
+    private double price;
    @Column(name = "quantity")
     private int quantity;
     @OneToMany(mappedBy ="product" ,cascade = CascadeType.ALL)

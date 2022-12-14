@@ -35,15 +35,7 @@ public class CommandServiceImp implements CommandService {
     // add commande
     @Override
     public Commande addCommande(Commande commande){
-        // checkin if commande exist
-        if (commandeRepository.findByRef(commande.getRef()) != null){
-            throw new IllegalStateException("Commande existe déja");
-            // checking if command values are empty
-        }else if (commande.getRef() == null || commande.getRef().isEmpty() || commande.getRef().isBlank()){
-            throw new IllegalStateException("please fill all the inputs");
-        }else{
             return commandeRepository.save(commande);
-        }
     }
     // delete commande
     @Override

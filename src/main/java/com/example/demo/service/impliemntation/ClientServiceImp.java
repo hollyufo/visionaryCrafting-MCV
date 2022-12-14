@@ -3,7 +3,6 @@ package com.example.demo.service.impliemntation;
 import com.example.demo.entities.Client;
 import com.example.demo.repository.ClientRepository;
 import com.example.demo.service.ClientService;
-import com.example.demo.service.CommandService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,9 +21,8 @@ public class ClientServiceImp implements ClientService {
         return clientRepository.findAll();
     }
 
-    @Override
-    public Optional<Client> getOnById(Long id) {
-        return clientRepository.findById(id);
+    public Client getOnById(Long id) {
+        return clientRepository.findById(id).orElse(null);
     }
 
     @Override

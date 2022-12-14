@@ -39,7 +39,7 @@ public class ClientController {
 
     @GetMapping("/edit/{id}")
     public String getClientById(@RequestParam("id") Long id, Model model){
-        Optional<Client> client = clientServiceImp.getOnById(id);
+        Client client = clientServiceImp.getOnById(id);
         model.addAttribute("client", client);
         return "edit-client";
     }
